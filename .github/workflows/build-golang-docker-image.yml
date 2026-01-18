@@ -1,14 +1,14 @@
 name: Build Golang Docker Image
 
-on:
+于:
   push:
-    branches: [ golang ]
+    分支: [ golang ]
     paths:
       - 'Dockerfile'
       - 'index.html'
       - 'main.go'
   pull_request:
-    branches: [ golang ]
+    分支: [ golang ]
   workflow_dispatch:
 
 jobs:
@@ -41,7 +41,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ghcr.io/${{ github.repository_owner }}/gows:latest
+            ghcr.io/${{ github.repository_owner }}/nfen:latest
           labels: |
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.description=websocket server
